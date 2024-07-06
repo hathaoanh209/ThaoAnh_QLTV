@@ -1,0 +1,59 @@
+﻿@page "/bookSheft"
+@using QLTV.UseCase.BookSheftScreen.interfaces
+@using QLTV.Web.UserPortal.Controls
+
+@inject IViewBookSheftUseCase viewBookSheftUseCase
+
+<h3>Book Sheft</h3>
+<br />
+
+@if (borrowingBookDetail != null && borrowingBookDetail.LineItems != null && borrowingBookDetail.LineItems.Count > 0)
+{
+    <div class="row">
+        <div class="col-6">
+            <ul>
+                @for (int i = 0; i < borrowingBookDetail.LineItems.Count; i++)
+                {
+                    <LineItemComponnet LineItem="borrowingBookDetail.LineItems[i]"
+                                       OnDeleteBook="HandleDeleteBook"
+                                       OnUpdateQuantity="HandleUpdateQuantity"></LineItemComponnet>
+
+                    @if (i < borrowingBookDetail.LineItems.Count - 1)
+                    {
+                        <li style="list-style:none">
+                            <hr />
+                        </li>
+                    }
+                }
+            </ul>
+        </div>
+        <div class="col">
+            <BorrowSummaryComponent borrowingBookDetail="borrowingBookDetail"></BorrowSummaryComponent>
+        </div>
+    </div>
+}
+else
+{
+    <p>No books in your book sheft.</p>
+}
+
+@code {
+    private BorrowingBookDetail borrowingBookDetail;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            borrowingBookDetail = await viewBookSheftUseCase.Execute();
+            StateHasChanged();
+        }
+    }
+    private void HandleDeleteBook()
+    {
+        this.borrowingBookDetail = borrowingBookDetail;
+    }
+    private void HandleUpdateQuantity()
+    {
+        this.borrowingBookDetail = borrowingBookDetail;
+    }
+}

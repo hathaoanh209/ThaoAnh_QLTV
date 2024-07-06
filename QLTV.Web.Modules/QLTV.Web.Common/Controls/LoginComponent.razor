@@ -1,0 +1,73 @@
+﻿@page "/login"
+@using Microsoft.AspNetCore.Components.Forms
+@using QLTV_Web.Common.ViewModels
+@inject NavigationManager navigationManager
+
+<head>
+    <style>
+        body {
+            background-image: url('https://png.pngtree.com/background/20210710/original/pngtree-read-more-on-reading-day-picture-image_1063124.jpg'); /* Đường dẫn đến hình ảnh */
+            background-size: cover; /* Đảm bảo hình ảnh bao phủ toàn bộ nền */
+            background-position: center; /* Đặt hình ảnh ở giữa */
+            background-repeat: no-repeat; /* Không lặp lại hình ảnh */
+        }
+
+        .card {
+            background-color: white; /* Màu nền phần thẻ */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Tạo đổ bóng cho thẻ */
+            max-width: 400px;
+            margin: 100px auto 0; /* Canh giữa và đẩy lên */
+        }
+
+        .card-header {
+            background-color: #007bff; /* Màu nền header */
+            color: white; /* Màu chữ header */
+            font-weight: bold; /* Đậm chữ header */
+            text-align: center; /* Căn giữa chữ header */
+            padding: 10px 0; /* Khoảng cách giữa header */
+            border-radius: 5px 5px 0 0; /* Bo tròn góc header */
+        }
+    </style>
+</head>
+
+<div class="card">
+    <div class="card-header">
+        ĐĂNG NHẬP
+    </div>
+    <div class="card-body">
+        <EditForm Model="loginViewModel" OnValidSubmit="HandleValidSubmit" class="form-value">
+            <DataAnnotationsValidator></DataAnnotationsValidator>
+            <ValidationSummary></ValidationSummary>
+
+            <div class="form-group">
+                <label for="name">Tên người dùng:</label>
+                <InputText id="name" @bind-Value="loginViewModel.UserName" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label for="password">Mật khẩu:</label>
+                <InputText id="password" @bind-Value="loginViewModel.Password" type="password" class="form-control" />
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Đăng nhập</button>
+        </EditForm>
+    </div>
+
+</div>
+
+@code {
+    private LoginViewModel loginViewModel;
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        loginViewModel = new LoginViewModel();
+    }
+
+    private void HandleValidSubmit()
+    {
+        navigationManager.NavigateTo($"/authenticate?user={loginViewModel.UserName}&pwd={loginViewModel.Password}", true);
+    }
+}

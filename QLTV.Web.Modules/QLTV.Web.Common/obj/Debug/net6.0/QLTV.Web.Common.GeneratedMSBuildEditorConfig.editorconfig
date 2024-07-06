@@ -1,0 +1,43 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows,browser
+build_property.RootNamespace = QLTV.Web.Common
+build_property.RootNamespace = QLTV.Web.Common
+build_property.ProjectDir = C:\Users\pc\Downloads\ThaoAnh_QLTV\QLTV.Web.Modules\QLTV.Web.Common\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\pc\Downloads\ThaoAnh_QLTV\QLTV.Web.Modules\QLTV.Web.Common
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/pc/Downloads/ThaoAnh_QLTV/QLTV.Web.Modules/QLTV.Web.Common/Controls/CustomerLoginComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29udHJvbHNcQ3VzdG9tZXJMb2dpbkNvbXBvbmVudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pc/Downloads/ThaoAnh_QLTV/QLTV.Web.Modules/QLTV.Web.Common/Controls/LoginComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29udHJvbHNcTG9naW5Db21wb25lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pc/Downloads/ThaoAnh_QLTV/QLTV.Web.Modules/QLTV.Web.Common/Controls/RegistrationComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29udHJvbHNcUmVnaXN0cmF0aW9uQ29tcG9uZW50LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pc/Downloads/ThaoAnh_QLTV/QLTV.Web.Modules/QLTV.Web.Common/Controls/SreachBarComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29udHJvbHNcU3JlYWNoQmFyQ29tcG9uZW50LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pc/Downloads/ThaoAnh_QLTV/QLTV.Web.Modules/QLTV.Web.Common/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pc/Downloads/ThaoAnh_QLTV/QLTV.Web.Modules/QLTV.Web.Common/Component1.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50MS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-u0skas6zgr

@@ -1,0 +1,88 @@
+﻿@page "/CustomerManagement"
+@using Microsoft.AspNetCore.Authorization
+@using QLTV.CoreBusiness.Services.interfaces
+@inject IUserService UserService
+@inject NavigationManager navigationManager
+@attribute [Authorize(Roles = "Admin")]
+<PageTitle>Quản Lý Khách Hàng</PageTitle>
+
+<AuthorizeView Roles="Admin">
+    <Authorized>
+        <div class="mainpage">
+            <h1>Quản Lý Khách Hàng</h1>
+
+            @if (cus_list == null)
+            {
+                <div class="spinner-border text-primary" role="status">
+                    <span class="visually-hidden">Đang tải...</span>
+                </div>
+            }
+            else if (cus_list.Count == 0)
+            {
+                <p>Không có khách hàng nào.</p>
+            }
+            else
+            {
+                <button class="btn btn-success" @onclick="CreateUser">Thêm mới Người dùng</button>
+                <br />
+                <br/>
+                <div>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Mã Khách Hàng</th>
+                                <th>Tên Khách Hàng</th>
+                                <th>Mật khẩu</th>
+                                <th>Email</th>
+                                <th>Vai trò</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var cus in cus_list)
+                            {
+                                <tr>
+                                    <td>@cus.CustomerId</td>
+                                    <td>@cus.CustomerName</td>
+                                    <td>@cus.Password</td>
+                                    <td>@cus.Email</td>
+                                    <td>@cus.Role</td>
+                                    <td>
+                                        <button class="btn btn-primary" @onclick="@(() => EditCustomer(cus.CustomerId))">Sửa</button>
+                                        <br />
+                                        <button class="btn btn-danger" @onclick="@(() => DeleteCustomer(cus.CustomerId))">Xóa</button>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            }
+        </div>
+    </Authorized>
+</AuthorizeView>
+
+@code {
+    List<Customer> cus_list;
+
+    protected override async Task OnInitializedAsync()
+    {
+        cus_list = await UserService.GetUserListAsync();
+    }
+
+    void EditCustomer(int cusId)
+    {
+        navigationManager.NavigateTo($"/CustomerManagement_CUD/{cusId}");
+    }
+
+    void CreateUser()
+    {
+        navigationManager.NavigateTo("/CustomerManagement_CUD");
+    }
+
+    async Task DeleteCustomer(int cusId)
+    {
+        await UserService.DeleteNewUserAsync(cusId);
+        cus_list = await UserService.GetUserListAsync(); // Làm mới danh sách người dùng sau khi xóa
+    }
+}

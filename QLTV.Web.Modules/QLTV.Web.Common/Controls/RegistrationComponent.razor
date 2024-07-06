@@ -1,0 +1,92 @@
+﻿@page "/registration"
+@using System.Text.Json
+@using System.Net.Http
+@using Microsoft.AspNetCore.Components.Forms
+@using QLTV.Web.Common.ViewModels
+@inject NavigationManager navigationManager
+
+<head>
+    <style>
+        body {
+            background-image: url('https://wallpapers.com/images/hd/library-background-zp3y3gk7am2pnsar.jpg'); /* Đường dẫn đến hình ảnh */
+            background-size: cover; /* Đảm bảo hình ảnh bao phủ toàn bộ nền */
+            background-position: center; /* Đặt hình ảnh ở giữa */
+            background-repeat: no-repeat; /* Không lặp lại hình ảnh */
+        }
+
+        .card {
+            background-color: white; /* Màu nền phần thẻ */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Tạo đổ bóng cho thẻ */
+        }
+
+        .description {
+            background-color: white; /* Màu nền phần mô tả */
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<div class="card text-center" style="max-width: 400px; margin: 0 auto; border-color: #007bff;">
+    <div class="card-header" style="background-color: #007bff; color: white; font-weight: bold;">
+        ĐĂNG KÍ/REGISTER
+    </div>
+    <div class="card-body">
+        <EditForm Model="registrationViewModel" OnValidSubmit="HandleValidSubmit" class="form-value">
+            <DataAnnotationsValidator></DataAnnotationsValidator>
+            <ValidationSummary></ValidationSummary>
+
+            <div class="form-group">
+                <label for="username" style="font-weight: bold;">Tên người dùng:</label>
+                <InputText type="text" id="username" name="username" autocomplete="username" @bind-Value="registrationViewModel.Name" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label for="password" style="font-weight: bold;">Mật khẩu:</label>
+                <InputText type="password" id="password" name="password" autocomplete="new-password" @bind-Value="registrationViewModel.Password" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label for="confirmPassword" style="font-weight: bold;">Xác nhận mật khẩu:</label>
+                <InputText type="password" id="confirmPassword" name="confirmPassword" autocomplete="new-password" @bind-Value="registrationViewModel.ConfirmPassword" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label for="email" style="font-weight: bold;">Email:</label>
+                <InputText type="email" id="email" name="email" autocomplete="email" @bind-Value="registrationViewModel.Email" class="form-control" />
+            </div>
+
+            <br />
+            <button type="submit" class="btn btn-primary btn-block" style="background-color: #007bff; border-color: #007bff;">Đăng kí</button>
+            <br />
+        </EditForm>
+    </div>
+    <div class="card-footer text-muted">
+        Bạn đã có tài khoản? <a href="/customer-login" class="link-primary">Đăng nhập</a>
+    </div>
+</div>
+
+@code {
+    private RegistrationViewModel registrationViewModel;
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        registrationViewModel = new RegistrationViewModel();
+    }
+
+    private async Task HandleValidSubmit()
+    {
+        // Validate password confirmation
+        if (registrationViewModel.Password != registrationViewModel.ConfirmPassword)
+        {
+            Console.WriteLine("Mật khẩu và xác nhận mật khẩu không khớp");
+            return;
+        }
+        else
+        {
+            navigationManager.NavigateTo("/customer-login");
+        }
+    }
+}

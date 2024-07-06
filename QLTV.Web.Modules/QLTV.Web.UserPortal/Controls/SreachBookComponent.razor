@@ -1,0 +1,48 @@
+﻿@page "/books"
+@using QLTV.UseCase.SreachBookScreen.interfaces
+
+@inject ISreachBookUseCase sreachBook;
+
+<h3><strong>Kết quả tìm kiếm</strong></h3>
+<br/>
+
+<SreachBarComponent OnSearch="HandleSearch"></SreachBarComponent>
+<br/>
+<br/>
+
+@if(books != null & books.Count() > 0)
+{
+	<div class="row">
+		@foreach (var book in books)
+		{
+			<BookCardComponent book="book"></BookCardComponent>
+		}
+	</div>
+}
+@code {
+    private IEnumerable<BOOK> books;
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        books = sreachBook.Execute(null);
+    }
+    private void HandleSearch(string filter)
+    {
+        books = sreachBook.Execute(filter);
+    }
+    }
+<style>
+    body {
+        background-image: url('https://img.freepik.com/premium-photo/abstract-background-images-wallpaper-ai-generated_643360-64883.jpg'); /* Đường dẫn đến hình ảnh */
+        background-size: cover; /* Đảm bảo hình ảnh bao phủ toàn bộ nền */
+        background-position: center; /* Đặt hình ảnh ở giữa */
+        background-repeat: no-repeat; /* Không lặp lại hình ảnh */
+    }
+
+    .description {
+        background-color: white; /* Màu nền phần mô tả */
+        padding: 10px;
+        border-radius: 5px;
+    }
+</style>
+

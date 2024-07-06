@@ -1,0 +1,129 @@
+﻿@page "/dashboard"
+@using Microsoft.AspNetCore.Components.Authorization
+@using Microsoft.AspNetCore.Authorization
+@using Microsoft.AspNetCore.Authentication.Cookies
+@using Microsoft.JSInterop
+@using QLTV.CoreBusiness.Services.interfaces
+@inject IJSRuntime JSRuntime
+@inject NavigationManager navigationManager
+@inject IUserService UserService
+@attribute [Authorize(Roles = "Admin,Member")]
+
+<PageTitle>Dashboard</PageTitle>
+
+<AuthorizeView Roles="Admin">
+    <Authorized>
+        <!-- Admin View -->
+        <div class="mainmenu">
+            <div class="form-group">
+                <input class="form-control" type="text" placeholder="Filter..." @bind="Filter" @bind:event="oninput">
+            </div>
+            <div>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>User ID</th>
+                            <th>Book ID</th>
+                            <th>Name</th>
+                            <th>Borrowed Date</th>
+                            <th>Due Date</th>
+                            <th>Is Checked Out</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var book in borrowingRecord)
+                        {
+                            if (!IsVisible(book))
+                                continue;
+                            <tr>
+                                <td>@book.CustomerId</td>
+                                <td>@book.BookId</td>
+                                <td>@(book.BOOK?.Name ?? "Unknown")</td>
+                                <td>@book.BorrowedDate.ToString("MM/dd/yyyy")</td>
+                                <td>@book.ReturnedDate.ToString("MM/dd/yyyy")</td>
+                                <td>@(book.IsCheckOut ? "Yes" : "No")</td>
+                                <td>
+                                    <button class="btn btn-primary" @onclick="@(() => HandleSubmit(book.Id))">Checkout Book</button>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </Authorized>
+</AuthorizeView>
+
+<AuthorizeView Roles="Member">
+    <Authorized>
+        <!-- Member View -->
+        <div class="mainmenu">
+            <div>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>User ID</th>
+                            <th>Book ID</th>
+                            <th>Name</th>
+                            <th>Borrowed Date</th>
+                            <th>Due Date</th>
+                            <th>Is Checked Out</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var book in borrowingRecord)
+                        {
+                            if (!IsVisible(book))
+                                continue;
+                            <tr>
+                                <td>@book.CustomerId</td>
+                                <td>@book.BookId</td>
+                                <td>@(book.BOOK?.Name ?? "Unknown")</td>
+                                <td>@book.BorrowedDate.ToString("MM/dd/yyyy")</td>
+                                <td>@book.ReturnedDate.ToString("MM/dd/yyyy")</td>
+                                <td>@(book.IsCheckOut ? "Yes" : "No")</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </Authorized>
+</AuthorizeView>
+
+@code {
+    [Parameter]
+    public int? Id { get; set; }
+
+    [CascadingParameter]
+    private Task<AuthenticationState> authenticationStateTask { get; set; }
+
+    public string Filter { get; set; }
+
+    public bool IsVisible(BorrowingRecords borrowingRecords)
+    {
+        if (string.IsNullOrEmpty(Filter))
+            return true;
+        if (borrowingRecords.CustomerId.ToString().StartsWith(Filter))
+            return true;
+        return false;
+    }
+
+    List<BorrowingRecords> borrowingRecord = new List<BorrowingRecords>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        var authenticationState = await authenticationStateTask;
+        borrowingRecord = await UserService.GetLoanBookListAsync(authenticationState.User.Identity.Name);
+    }
+
+    async Task HandleSubmit(int id)
+    {
+        var authenticationState = await authenticationStateTask;
+        var selectedBook = borrowingRecord.FirstOrDefault(b => b.Id == id);
+        if (selectedBook != null)
+        {
+            navigationManager.NavigateTo($"/checkout/{selectedBook.Id}"); // Chuyển hướng sang trang checkout với Id của sách được chọn
+        }
+    }
+}

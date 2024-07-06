@@ -1,0 +1,896 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\ThaoAnh_QLTV\\ThaoAnh_QLTV\\ThaoAnh_QLTV.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\Plugins\\QLTV.DataStore.SQL.Dapper\\ClassLibrary1\\QLTV.DataStore.SQL.Dapper.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\Plugins\\QLTV.DataStore.SQL.Dapper\\ClassLibrary1\\QLTV.DataStore.SQL.Dapper.csproj",
+        "projectName": "QLTV.DataStore.SQL.Dapper",
+        "projectPath": "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\Plugins\\QLTV.DataStore.SQL.Dapper\\ClassLibrary1\\QLTV.DataStore.SQL.Dapper.csproj",
+        "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\Plugins\\QLTV.DataStore.SQL.Dapper\\ClassLibrary1\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\ThaoAnh_QLTV\\QLTV.UseCase\\QLTV.UseCase.csproj": {
+                "projectPath": "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\ThaoAnh_QLTV\\QLTV.UseCase\\QLTV.UseCase.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.1.35, )"
+            },
+            "Microsoft.AspNetCore.Components.Authorization": {
+              "target": "Package",
+              "version": "[6.0.12, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.6, )"
+            },
+            "dotMorten.Microsoft.SqlServer.Types": {
+              "target": "Package",
+              "version": "[2.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.31, 6.0.31]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.31, 6.0.31]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.31, 6.0.31]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.206\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\QLTV.Web.Modules\\QLTV.Web.AdminPortal\\QLTV.Web.AdminPortal.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\QLTV.Web.Modules\\QLTV.Web.AdminPortal\\QLTV.Web.AdminPortal.csproj",
+        "projectName": "QLTV.Web.AdminPortal",
+        "projectPath": "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\QLTV.Web.Modules\\QLTV.Web.AdminPortal\\QLTV.Web.AdminPortal.csproj",
+        "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\QLTV.Web.Modules\\QLTV.Web.AdminPortal\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\QLTV.Web.Modules\\QLTV.Web.Common\\QLTV.Web.Common.csproj": {
+                "projectPath": "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\QLTV.Web.Modules\\QLTV.Web.Common\\QLTV.Web.Common.csproj"
+              },
+              "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\ThaoAnh_QLTV\\QLTV.CoreBusiness\\QLTV.CoreBusiness.csproj": {
+                "projectPath": "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\ThaoAnh_QLTV\\QLTV.CoreBusiness\\QLTV.CoreBusiness.csproj"
+              },
+              "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\ThaoAnh_QLTV\\QLTV.UseCase\\QLTV.UseCase.csproj": {
+                "projectPath": "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\ThaoAnh_QLTV\\QLTV.UseCase\\QLTV.UseCase.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Components.Authorization": {
+              "target": "Package",
+              "version": "[6.0.12, )"
+            },
+            "Microsoft.AspNetCore.Components.Web": {
+              "target": "Package",
+              "version": "[6.0.28, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.6, )"
+            },
+            "dotMorten.Microsoft.SqlServer.Types": {
+              "target": "Package",
+              "version": "[2.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.31, 6.0.31]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.31, 6.0.31]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.31, 6.0.31]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.206\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\QLTV.Web.Modules\\QLTV.Web.Common\\QLTV.Web.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\QLTV.Web.Modules\\QLTV.Web.Common\\QLTV.Web.Common.csproj",
+        "projectName": "QLTV.Web.Common",
+        "projectPath": "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\QLTV.Web.Modules\\QLTV.Web.Common\\QLTV.Web.Common.csproj",
+        "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\QLTV.Web.Modules\\QLTV.Web.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\ThaoAnh_QLTV\\QLTV.CoreBusiness\\QLTV.CoreBusiness.csproj": {
+                "projectPath": "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\ThaoAnh_QLTV\\QLTV.CoreBusiness\\QLTV.CoreBusiness.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.Cookies": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Components.Authorization": {
+              "target": "Package",
+              "version": "[6.0.12, )"
+            },
+            "Microsoft.AspNetCore.Components.Web": {
+              "target": "Package",
+              "version": "[6.0.28, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.6, )"
+            },
+            "dotMorten.Microsoft.SqlServer.Types": {
+              "target": "Package",
+              "version": "[2.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.31, 6.0.31]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.31, 6.0.31]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.31, 6.0.31]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.206\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\QLTV.Web.Modules\\QLTV.Web.UserPortal\\QLTV.Web.UserPortal.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\QLTV.Web.Modules\\QLTV.Web.UserPortal\\QLTV.Web.UserPortal.csproj",
+        "projectName": "QLTV.Web.UserPortal",
+        "projectPath": "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\QLTV.Web.Modules\\QLTV.Web.UserPortal\\QLTV.Web.UserPortal.csproj",
+        "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\QLTV.Web.Modules\\QLTV.Web.UserPortal\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\Plugins\\QLTV.DataStore.SQL.Dapper\\ClassLibrary1\\QLTV.DataStore.SQL.Dapper.csproj": {
+                "projectPath": "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\Plugins\\QLTV.DataStore.SQL.Dapper\\ClassLibrary1\\QLTV.DataStore.SQL.Dapper.csproj"
+              },
+              "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\QLTV.Web.Modules\\QLTV.Web.Common\\QLTV.Web.Common.csproj": {
+                "projectPath": "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\QLTV.Web.Modules\\QLTV.Web.Common\\QLTV.Web.Common.csproj"
+              },
+              "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\ThaoAnh_QLTV\\QLTV.UseCase\\QLTV.UseCase.csproj": {
+                "projectPath": "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\ThaoAnh_QLTV\\QLTV.UseCase\\QLTV.UseCase.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Components.Authorization": {
+              "target": "Package",
+              "version": "[6.0.12, )"
+            },
+            "Microsoft.AspNetCore.Components.Web": {
+              "target": "Package",
+              "version": "[6.0.28, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.6, )"
+            },
+            "dotMorten.Microsoft.SqlServer.Types": {
+              "target": "Package",
+              "version": "[2.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.31, 6.0.31]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.31, 6.0.31]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.31, 6.0.31]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.206\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\ThaoAnh_QLTV\\ClassLibrary2\\QLTV.StateStore.DI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\ThaoAnh_QLTV\\ClassLibrary2\\QLTV.StateStore.DI.csproj",
+        "projectName": "QLTV.StateStore.DI",
+        "projectPath": "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\ThaoAnh_QLTV\\ClassLibrary2\\QLTV.StateStore.DI.csproj",
+        "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\ThaoAnh_QLTV\\ClassLibrary2\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\ThaoAnh_QLTV\\QLTV.UseCase\\QLTV.UseCase.csproj": {
+                "projectPath": "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\ThaoAnh_QLTV\\QLTV.UseCase\\QLTV.UseCase.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.31, 6.0.31]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.31, 6.0.31]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.31, 6.0.31]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.206\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\ThaoAnh_QLTV\\QLTV.CoreBusiness\\QLTV.CoreBusiness.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\ThaoAnh_QLTV\\QLTV.CoreBusiness\\QLTV.CoreBusiness.csproj",
+        "projectName": "QLTV.CoreBusiness",
+        "projectPath": "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\ThaoAnh_QLTV\\QLTV.CoreBusiness\\QLTV.CoreBusiness.csproj",
+        "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\ThaoAnh_QLTV\\QLTV.CoreBusiness\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Components": {
+              "target": "Package",
+              "version": "[6.0.25, )"
+            },
+            "Microsoft.AspNetCore.Components.Authorization": {
+              "target": "Package",
+              "version": "[6.0.12, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.21, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.6, )"
+            },
+            "dotMorten.Microsoft.SqlServer.Types": {
+              "target": "Package",
+              "version": "[2.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.31, 6.0.31]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.31, 6.0.31]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.31, 6.0.31]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.206\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\ThaoAnh_QLTV\\QLTV.UseCase\\QLTV.UseCase.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\ThaoAnh_QLTV\\QLTV.UseCase\\QLTV.UseCase.csproj",
+        "projectName": "QLTV.UseCase",
+        "projectPath": "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\ThaoAnh_QLTV\\QLTV.UseCase\\QLTV.UseCase.csproj",
+        "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\ThaoAnh_QLTV\\QLTV.UseCase\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\ThaoAnh_QLTV\\QLTV.CoreBusiness\\QLTV.CoreBusiness.csproj": {
+                "projectPath": "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\ThaoAnh_QLTV\\QLTV.CoreBusiness\\QLTV.CoreBusiness.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Components": {
+              "target": "Package",
+              "version": "[6.0.25, )"
+            },
+            "Microsoft.AspNetCore.Components.Authorization": {
+              "target": "Package",
+              "version": "[6.0.12, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.6, )"
+            },
+            "dotMorten.Microsoft.SqlServer.Types": {
+              "target": "Package",
+              "version": "[2.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.31, 6.0.31]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.31, 6.0.31]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.31, 6.0.31]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.206\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\ThaoAnh_QLTV\\RazorClassLibrary3\\QLTV.BookSheft.LocalStorage.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\ThaoAnh_QLTV\\RazorClassLibrary3\\QLTV.BookSheft.LocalStorage.csproj",
+        "projectName": "QLTV.BookSheft.LocalStorage",
+        "projectPath": "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\ThaoAnh_QLTV\\RazorClassLibrary3\\QLTV.BookSheft.LocalStorage.csproj",
+        "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\ThaoAnh_QLTV\\RazorClassLibrary3\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\ThaoAnh_QLTV\\QLTV.UseCase\\QLTV.UseCase.csproj": {
+                "projectPath": "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\ThaoAnh_QLTV\\QLTV.UseCase\\QLTV.UseCase.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Components.Web": {
+              "target": "Package",
+              "version": "[6.0.28, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.31, 6.0.31]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.31, 6.0.31]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.31, 6.0.31]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.206\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\ThaoAnh_QLTV\\ThaoAnh_QLTV\\ThaoAnh_QLTV.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\ThaoAnh_QLTV\\ThaoAnh_QLTV\\ThaoAnh_QLTV.csproj",
+        "projectName": "ThaoAnh_QLTV",
+        "projectPath": "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\ThaoAnh_QLTV\\ThaoAnh_QLTV\\ThaoAnh_QLTV.csproj",
+        "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\ThaoAnh_QLTV\\ThaoAnh_QLTV\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\Plugins\\QLTV.DataStore.SQL.Dapper\\ClassLibrary1\\QLTV.DataStore.SQL.Dapper.csproj": {
+                "projectPath": "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\Plugins\\QLTV.DataStore.SQL.Dapper\\ClassLibrary1\\QLTV.DataStore.SQL.Dapper.csproj"
+              },
+              "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\QLTV.Web.Modules\\QLTV.Web.AdminPortal\\QLTV.Web.AdminPortal.csproj": {
+                "projectPath": "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\QLTV.Web.Modules\\QLTV.Web.AdminPortal\\QLTV.Web.AdminPortal.csproj"
+              },
+              "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\QLTV.Web.Modules\\QLTV.Web.UserPortal\\QLTV.Web.UserPortal.csproj": {
+                "projectPath": "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\QLTV.Web.Modules\\QLTV.Web.UserPortal\\QLTV.Web.UserPortal.csproj"
+              },
+              "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\ThaoAnh_QLTV\\ClassLibrary2\\QLTV.StateStore.DI.csproj": {
+                "projectPath": "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\ThaoAnh_QLTV\\ClassLibrary2\\QLTV.StateStore.DI.csproj"
+              },
+              "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\ThaoAnh_QLTV\\QLTV.UseCase\\QLTV.UseCase.csproj": {
+                "projectPath": "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\ThaoAnh_QLTV\\QLTV.UseCase\\QLTV.UseCase.csproj"
+              },
+              "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\ThaoAnh_QLTV\\RazorClassLibrary3\\QLTV.BookSheft.LocalStorage.csproj": {
+                "projectPath": "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\ThaoAnh_QLTV\\RazorClassLibrary3\\QLTV.BookSheft.LocalStorage.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Components.Authorization": {
+              "target": "Package",
+              "version": "[6.0.12, )"
+            },
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.6, )"
+            },
+            "dotMorten.Microsoft.SqlServer.Types": {
+              "target": "Package",
+              "version": "[2.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.31, 6.0.31]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[6.0.31, 6.0.31]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.31, 6.0.31]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.31, 6.0.31]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.206\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

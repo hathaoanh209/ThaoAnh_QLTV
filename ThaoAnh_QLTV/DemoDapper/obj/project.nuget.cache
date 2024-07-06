@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "qu2XnYXZUkcxxsKFScoSpPehae5LfzaC0jy/M7XLlo+qaakNrTl2tu40p7885bu0gLS0nO61EvExjsD+mPYA2w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\ThaoAnh_QLTV\\DemoDapper\\DemoDapper.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\pc\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.31\\microsoft.windowsdesktop.app.ref.6.0.31.nupkg.sha512",
+    "C:\\Users\\pc\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.31\\microsoft.netcore.app.ref.6.0.31.nupkg.sha512",
+    "C:\\Users\\pc\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.31\\microsoft.aspnetcore.app.ref.6.0.31.nupkg.sha512"
+  ],
+  "logs": []
+}

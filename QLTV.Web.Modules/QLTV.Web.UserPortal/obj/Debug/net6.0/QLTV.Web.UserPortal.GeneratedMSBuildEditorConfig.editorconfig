@@ -1,0 +1,75 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows,browser
+build_property.RootNamespace = QLTV.Web.UserPortal
+build_property.RootNamespace = QLTV.Web.UserPortal
+build_property.ProjectDir = C:\Users\pc\Downloads\ThaoAnh_QLTV\QLTV.Web.Modules\QLTV.Web.UserPortal\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\pc\Downloads\ThaoAnh_QLTV\QLTV.Web.Modules\QLTV.Web.UserPortal
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/pc/Downloads/ThaoAnh_QLTV/QLTV.Web.Modules/QLTV.Web.UserPortal/Controls/BookCardComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29udHJvbHNcQm9va0NhcmRDb21wb25lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pc/Downloads/ThaoAnh_QLTV/QLTV.Web.Modules/QLTV.Web.UserPortal/Controls/BookItemComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29udHJvbHNcQm9va0l0ZW1Db21wb25lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pc/Downloads/ThaoAnh_QLTV/QLTV.Web.Modules/QLTV.Web.UserPortal/Controls/BorrowSummaryComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29udHJvbHNcQm9ycm93U3VtbWFyeUNvbXBvbmVudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pc/Downloads/ThaoAnh_QLTV/QLTV.Web.Modules/QLTV.Web.UserPortal/Controls/LineItemComponnet.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29udHJvbHNcTGluZUl0ZW1Db21wb25uZXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pc/Downloads/ThaoAnh_QLTV/QLTV.Web.Modules/QLTV.Web.UserPortal/Controls/SreachBookComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29udHJvbHNcU3JlYWNoQm9va0NvbXBvbmVudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pc/Downloads/ThaoAnh_QLTV/QLTV.Web.Modules/QLTV.Web.UserPortal/Pages/BookCardComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va0NhcmRDb21wb25lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pc/Downloads/ThaoAnh_QLTV/QLTV.Web.Modules/QLTV.Web.UserPortal/Pages/BookLoan.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va0xvYW4ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pc/Downloads/ThaoAnh_QLTV/QLTV.Web.Modules/QLTV.Web.UserPortal/Pages/BookSheftComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va1NoZWZ0Q29tcG9uZW50LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pc/Downloads/ThaoAnh_QLTV/QLTV.Web.Modules/QLTV.Web.UserPortal/Pages/ChoseDateBook.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2hvc2VEYXRlQm9vay5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pc/Downloads/ThaoAnh_QLTV/QLTV.Web.Modules/QLTV.Web.UserPortal/Pages/Dashboard.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFzaGJvYXJkLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pc/Downloads/ThaoAnh_QLTV/QLTV.Web.Modules/QLTV.Web.UserPortal/Pages/LineItemComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGluZUl0ZW1Db21wb25lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pc/Downloads/ThaoAnh_QLTV/QLTV.Web.Modules/QLTV.Web.UserPortal/Pages/ViewBookComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlld0Jvb2tDb21wb25lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pc/Downloads/ThaoAnh_QLTV/QLTV.Web.Modules/QLTV.Web.UserPortal/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pc/Downloads/ThaoAnh_QLTV/QLTV.Web.Modules/QLTV.Web.UserPortal/Component1.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50MS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-gmvorp5jrk

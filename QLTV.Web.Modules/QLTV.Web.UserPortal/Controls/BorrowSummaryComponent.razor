@@ -1,0 +1,46 @@
+﻿@inject NavigationManager navigationManager
+
+<div class="card m-2" style="width: 25rem;">
+    <div class="card-body">
+        <h5 class="card-title">Order Summary</h5>
+
+        <div class="card-text">
+            <div>
+                Items Borrowed:
+            </div>
+            <div>
+                <text>@itemsCount</text>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        @if (!HidePlaceOrder)
+        {
+            <button class="button btn-primary" @onclick="PlaceOrder">Place your order</button>
+        }
+    </div>
+</div>
+
+@code {
+    int itemsCount = 0;
+
+    [Parameter]
+    public BorrowingBookDetail borrowingBookDetail { get; set; }
+
+    [Parameter]
+    public bool HidePlaceOrder { get; set; } = false;
+
+    protected override void OnParametersSet()
+    {
+        base.OnParametersSet();
+        if (borrowingBookDetail != null)
+        {
+            itemsCount = borrowingBookDetail.LineItems.Sum(x => x.Quantity);
+        }
+    }
+
+    private void PlaceOrder()
+    {
+        navigationManager.NavigateTo("/placeOrder");
+    }
+}

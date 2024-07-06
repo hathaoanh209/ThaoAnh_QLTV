@@ -1,0 +1,51 @@
+﻿@using QLTV.CoreBusiness.Models
+@using QLTV.UseCase.BookSheftScreen.interfaces
+@inject IDeleteBookUseCase deleteBookUseCase
+@inject IUpdateQuantityUseCase updateQuantityUseCase
+
+@if (LineItem != null && LineItem.BOOK != null)
+{
+    <li class="row">
+        <div class="col">
+            <img src="@LineItem.BOOK.ImageLink" />
+        </div>
+        <div class="col">
+            <h5>@LineItem.BOOK.Name</h5>
+            <div>
+                Quantity:&nbsp;&nbsp;
+                <input type="number" min="0" value="@LineItem.Quantity" @onchange="HandleQuantityChange" />
+            </div>
+        </div>
+        <div class="col">
+            <button class="btn btn-light" @onclick="@(() => DeleteProduct(LineItem.BookId))">Delete</button>
+        </div>
+    </li>
+}
+
+@code {
+    [Parameter]
+    public LineItem LineItem { get; set; }
+
+    [Parameter]
+    public EventCallback<BorrowingBookDetail> OnDeleteBook { get; set; }
+
+    [Parameter]
+    public EventCallback<LineItem> OnUpdateQuantity { get; set; }
+
+    async Task HandleQuantityChange(ChangeEventArgs e)
+    {
+        if (e.Value == null || string.IsNullOrEmpty(e.Value.ToString())) return;
+        int qty = 0;
+        if (int.TryParse(e.Value.ToString(), out qty))
+        {
+            var borrow = await updateQuantityUseCase.Execute(LineItem.BookId, qty);
+            await OnUpdateQuantity.InvokeAsync(LineItem); // Pass LineItem instead of BorrowingBookDetail
+        }
+    }
+
+    async Task DeleteProduct(int bookId)
+    {
+        var borrow = await deleteBookUseCase.Execute(bookId);
+        await OnDeleteBook.InvokeAsync(borrow);
+    }
+}

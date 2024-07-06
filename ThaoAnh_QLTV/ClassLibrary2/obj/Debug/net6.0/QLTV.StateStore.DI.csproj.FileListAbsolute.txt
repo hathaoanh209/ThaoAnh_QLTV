@@ -1,0 +1,17 @@
+C:\Users\pc\Downloads\ThaoAnh_QLTV\ThaoAnh_QLTV\ClassLibrary2\bin\Debug\net6.0\QLTV.StateStore.DI.deps.json
+C:\Users\pc\Downloads\ThaoAnh_QLTV\ThaoAnh_QLTV\ClassLibrary2\bin\Debug\net6.0\QLTV.StateStore.DI.dll
+C:\Users\pc\Downloads\ThaoAnh_QLTV\ThaoAnh_QLTV\ClassLibrary2\bin\Debug\net6.0\QLTV.StateStore.DI.pdb
+C:\Users\pc\Downloads\ThaoAnh_QLTV\ThaoAnh_QLTV\ClassLibrary2\bin\Debug\net6.0\QLTV.CoreBusiness.dll
+C:\Users\pc\Downloads\ThaoAnh_QLTV\ThaoAnh_QLTV\ClassLibrary2\bin\Debug\net6.0\QLTV.UseCase.dll
+C:\Users\pc\Downloads\ThaoAnh_QLTV\ThaoAnh_QLTV\ClassLibrary2\bin\Debug\net6.0\QLTV.UseCase.pdb
+C:\Users\pc\Downloads\ThaoAnh_QLTV\ThaoAnh_QLTV\ClassLibrary2\bin\Debug\net6.0\QLTV.CoreBusiness.pdb
+C:\Users\pc\Downloads\ThaoAnh_QLTV\ThaoAnh_QLTV\ClassLibrary2\obj\Debug\net6.0\QLTV.StateStore.DI.csproj.AssemblyReference.cache
+C:\Users\pc\Downloads\ThaoAnh_QLTV\ThaoAnh_QLTV\ClassLibrary2\obj\Debug\net6.0\QLTV.StateStore.DI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pc\Downloads\ThaoAnh_QLTV\ThaoAnh_QLTV\ClassLibrary2\obj\Debug\net6.0\QLTV.StateStore.DI.AssemblyInfoInputs.cache
+C:\Users\pc\Downloads\ThaoAnh_QLTV\ThaoAnh_QLTV\ClassLibrary2\obj\Debug\net6.0\QLTV.StateStore.DI.AssemblyInfo.cs
+C:\Users\pc\Downloads\ThaoAnh_QLTV\ThaoAnh_QLTV\ClassLibrary2\obj\Debug\net6.0\QLTV.StateStore.DI.csproj.CoreCompileInputs.cache
+C:\Users\pc\Downloads\ThaoAnh_QLTV\ThaoAnh_QLTV\ClassLibrary2\obj\Debug\net6.0\QLTV.Sta.982C0B93.Up2Date
+C:\Users\pc\Downloads\ThaoAnh_QLTV\ThaoAnh_QLTV\ClassLibrary2\obj\Debug\net6.0\QLTV.StateStore.DI.dll
+C:\Users\pc\Downloads\ThaoAnh_QLTV\ThaoAnh_QLTV\ClassLibrary2\obj\Debug\net6.0\refint\QLTV.StateStore.DI.dll
+C:\Users\pc\Downloads\ThaoAnh_QLTV\ThaoAnh_QLTV\ClassLibrary2\obj\Debug\net6.0\QLTV.StateStore.DI.pdb
+C:\Users\pc\Downloads\ThaoAnh_QLTV\ThaoAnh_QLTV\ClassLibrary2\obj\Debug\net6.0\ref\QLTV.StateStore.DI.dll

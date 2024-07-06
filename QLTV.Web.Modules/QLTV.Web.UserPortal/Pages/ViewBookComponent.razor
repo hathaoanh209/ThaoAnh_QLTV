@@ -1,0 +1,76 @@
+﻿@page "/book/{id:int}"
+@using Microsoft.AspNetCore.Components.Authorization
+@using QLTV.CoreBusiness.Services
+@using QLTV.CoreBusiness.Services.interfaces
+@using QLTV.UseCase.SreachBookScreen.interfaces
+@inject NavigationManager navigationManager
+@inject IViewBookUseCase viewBook
+@inject IUserService userService
+@inject AuthenticationStateProvider authenticationStateProvider
+
+<div class="container">
+    <h3 class="my-4">Chi tiết sách</h3>
+    <div class="card shadow-sm">
+        <div class="row no-gutters">
+            <div class="col-md-4">
+                <img src="@book.ImageLink" class="card-img" alt="@book.Name" style="height: 100%;">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title"><strong>@book.Name</strong></h5>
+                    <h6 class="card-subtitle mb-2 text-muted">@book.Author</h6>
+                    <hr />
+                    <p><strong>Thể loại:</strong> <span style="color: darkred">@book.TypeOfBook</span></p>
+                    <div class="description">
+                        <p><strong>Mô tả:</strong></p>
+                        <p>@book.Description</p>
+                    </div>
+                    <hr />
+                    <button class="btn btn-primary btn-lg" @onclick="AddToCart">Mượn sách</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    private BOOK book;
+
+    [Parameter]
+    public int Id { get; set; }
+
+    protected override void OnParametersSet()
+    {
+        base.OnParametersSet();
+        if (Id > 0)
+            book = viewBook.Execute(Id);
+    }
+
+    private async Task AddToCart()
+    {
+        var authenticationState = await authenticationStateProvider.GetAuthenticationStateAsync();
+        var borrowingRecord = new BorrowingRecords
+            {
+                BookId = book.BookId,
+                ReturnedDate = DateTime.Today,
+            };
+
+        await userService.AddBookLoanAsync(borrowingRecord, authenticationState.User.Identity.Name, Id);
+        navigationManager.NavigateTo($"/choseDateCUD/{Id}");
+    }
+}
+
+<style>
+    body {
+        background-image: url('https://img.freepik.com/premium-photo/abstract-background-images-wallpaper-ai-generated_643360-64883.jpg'); /* Đường dẫn đến hình ảnh */
+        background-size: cover; /* Đảm bảo hình ảnh bao phủ toàn bộ nền */
+        background-position: center; /* Đặt hình ảnh ở giữa */
+        background-repeat: no-repeat; /* Không lặp lại hình ảnh */
+    }
+
+    .description {
+        background-color: white; /* Màu nền phần mô tả */
+        padding: 10px;
+        border-radius: 5px;
+    }
+</style>

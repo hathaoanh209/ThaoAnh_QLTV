@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\ThaoAnh_QLTV.props" />
+</Project>

@@ -1,0 +1,96 @@
+﻿@page "/BookC&U"
+@page "/BookC&U/{Id:int}"
+@using Microsoft.AspNetCore.Authorization
+@using Microsoft.AspNetCore.Components.Authorization
+@using Microsoft.AspNetCore.Components.Forms
+@using QLTV.CoreBusiness.Services.interfaces
+@inject NavigationManager NavigationManager
+@inject IUserService UserService
+@attribute [Authorize(Roles = "Admin")]
+
+<h2>@(Id.HasValue ? "Edit Book" : "New Book")</h2>
+
+<AuthorizeView Roles="Admin">
+    <Authorized Context="authContext">
+        <div class="container">
+            <div class="card shadow-sm">
+                <div class="card-body form-container">
+                    <EditForm Model="currentbook" OnValidSubmit="HandleSubmit">
+                        <DataAnnotationsValidator />
+                        <ValidationSummary />
+
+                        <div class="form-group">
+                            <label for="name">Tên sách</label>
+                            <InputText id="name" @bind-Value="currentbook.Name" class="form-control" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="author">Tác giả</label>
+                            <InputText id="author" @bind-Value="currentbook.Author" class="form-control" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="typeOfBook">Loại sách</label>
+                            <InputText id="typeOfBook" @bind-Value="currentbook.TypeOfBook" class="form-control" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="description">Mô tả</label>
+                            <InputTextArea id="description" @bind-Value="currentbook.Description" class="form-control" rows="5"></InputTextArea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="imageLink">Hình ảnh</label>
+                            <InputText id="imageLink" @bind-Value="currentbook.ImageLink" class="form-control" />
+                            @if (!string.IsNullOrEmpty(currentbook.ImageLink))
+                            {
+                                <img src="@currentbook.ImageLink" alt="Book Image" class="img-fluid mt-3" style="max-height: 300px;" />
+                            }
+                        </div>
+                        <br />
+                        <button type="submit" class="btn btn-primary">Cập nhật</button>
+                    </EditForm>
+                </div>
+            </div>
+        </div>
+    </Authorized>
+    <NotAuthorized>
+        <p>You are not authorized to view this form.</p>
+    </NotAuthorized>
+</AuthorizeView>
+
+<style>
+    body  {
+        background-color: salmon  ; /* Màu nền xám nhạt */
+     
+    }
+</style>
+
+@code {
+    [Parameter]
+    public int? Id { get; set; }
+
+    public BOOK currentbook { get; set; } = new BOOK();
+
+    protected override async Task OnParametersSetAsync()
+    {
+        if (Id.HasValue)
+        {
+            currentbook = await UserService.GetBookByIdAsync(Id.Value);
+        }
+    }
+
+    private async Task HandleSubmit()
+    {
+        if (Id.HasValue)
+        {
+            await UserService.UpdateNewBookAsync(currentbook, Id.Value);
+        }
+        else
+        {
+            currentbook.Available = true;
+            await UserService.AddNewBookAsync(currentbook);
+        }
+        NavigationManager.NavigateTo("/BookManegement");
+    }
+}

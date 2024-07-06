@@ -1,0 +1,104 @@
+﻿@page "/CustomerManagement_CUD"
+@page "/CustomerManagement_CUD/{Id:int}"
+@using Microsoft.AspNetCore.Authorization
+@using Microsoft.AspNetCore.Components.Forms
+@using QLTV.CoreBusiness.Services.interfaces
+@inject NavigationManager navigationManager
+@inject IUserService UserService
+@attribute [Authorize(Roles = "Admin")]
+
+@if (Id is null)
+{
+    <PageTitle><strong>Thêm Mới Người Dùng</strong></PageTitle>
+}
+else
+{
+    <PageTitle><strong>Cập nhật Thông Tin Người Dùng</strong></PageTitle>
+}
+
+<div class="add_form">
+    <AuthorizeView Roles="Admin" Context="authContext">
+        <Authorized>
+            <div class="Title_page"><strong>THÔNG TIN KHÁCH HÀNG</strong></div>
+            <div class="addbook_form_body">
+                <EditForm OnSubmit="HandleSubmit" Model="@current_cus">
+                    <div class="form-outline mb-4">
+                        <label><strong>Tên Người Dùng</strong></label>
+                        <InputText @bind-Value="current_cus.CustomerName" type="text" class="form-control" />
+
+                        <label><strong>Mật khẩu</strong></label>
+                        <InputText @bind-Value="current_cus.Password" type="password" class="form-control" />
+
+                        <label><strong>Email</strong></label>
+                        <InputText @bind-Value="current_cus.Email" class="form-control" />
+
+                        <label><strong>Vai trò</strong></label>
+                        <InputSelect @bind-Value="current_cus.Role" class="form-select" aria-label="Chọn vai trò">
+                            <option value="Admin">Quản trị viên</option>
+                            <option value="Member">Thành viên</option>
+                        </InputSelect>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Xác nhận</button>
+                </EditForm>
+            </div>
+        </Authorized>
+        <NotAuthorized>
+            <div class="Title_page"><strong>THÔNG TIN KHÁCH HÀNG</strong></div>
+            <div class="addbook_form_body">
+                <EditForm OnSubmit="HandleSubmit" Model="@current_cus">
+                    <div class="form-outline mb-4">
+                        <label><strong>Tên Người Dùng</strong></label>
+                        <InputText @bind-Value="current_cus.CustomerName" type="text" class="form-control" />
+
+                        <label><strong>Mật khẩu</strong></label>
+                        <InputText @bind-Value="current_cus.Password" type="password" class="form-control" />
+
+                        <label><strong>Email</strong></label>
+                        <InputText @bind-Value="current_cus.Email" class="form-control" />
+
+                        <label><strong>Vai trò</strong></label>
+                        <InputSelect @bind-Value="current_cus.Role" class="form-select" aria-label="Chọn vai trò">
+                            <option value="Admin">Quản trị viên</option>
+                            <option value="Member">Thành viên</option>
+                        </InputSelect>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Xác nhận</button>
+                </EditForm>
+            </div>
+        </NotAuthorized>
+    </AuthorizeView>
+</div>
+
+@code {
+    [Parameter]
+    public int? Id { get; set; }
+
+    public Customer current_cus { get; set; } = new();
+
+    protected override async Task OnParametersSetAsync()
+    {
+        if (Id is not null)
+        {
+            var edituser = await UserService.GetUserByIdAsync((int)Id);
+            if (edituser is not null)
+                current_cus = edituser;
+        }
+    }
+
+    async Task HandleSubmit()
+    {
+        if (Id is not null)
+        {
+            // Cập nhật thông tin người dùng
+            await UserService.UpdateNewUserAsync(current_cus, (int)Id);
+            navigationManager.NavigateTo("/CustomerManagement", forceLoad: true);
+        }
+        else
+        {
+            // Thêm mới người dùng
+            current_cus.Role = "Member"; // Mặc định là thành viên
+            await UserService.AddNewUserAsync(current_cus);
+            navigationManager.NavigateTo("/CustomerManagement", forceLoad: true);
+        }
+    }
+}

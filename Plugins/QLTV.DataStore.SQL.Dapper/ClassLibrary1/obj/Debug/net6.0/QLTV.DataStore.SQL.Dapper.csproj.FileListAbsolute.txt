@@ -1,0 +1,17 @@
+C:\Users\pc\Downloads\ThaoAnh_QLTV\Plugins\QLTV.DataStore.SQL.Dapper\ClassLibrary1\bin\Debug\net6.0\QLTV.DataStore.SQL.Dapper.deps.json
+C:\Users\pc\Downloads\ThaoAnh_QLTV\Plugins\QLTV.DataStore.SQL.Dapper\ClassLibrary1\bin\Debug\net6.0\QLTV.DataStore.SQL.Dapper.dll
+C:\Users\pc\Downloads\ThaoAnh_QLTV\Plugins\QLTV.DataStore.SQL.Dapper\ClassLibrary1\bin\Debug\net6.0\QLTV.DataStore.SQL.Dapper.pdb
+C:\Users\pc\Downloads\ThaoAnh_QLTV\Plugins\QLTV.DataStore.SQL.Dapper\ClassLibrary1\bin\Debug\net6.0\QLTV.CoreBusiness.dll
+C:\Users\pc\Downloads\ThaoAnh_QLTV\Plugins\QLTV.DataStore.SQL.Dapper\ClassLibrary1\bin\Debug\net6.0\QLTV.UseCase.dll
+C:\Users\pc\Downloads\ThaoAnh_QLTV\Plugins\QLTV.DataStore.SQL.Dapper\ClassLibrary1\bin\Debug\net6.0\QLTV.CoreBusiness.pdb
+C:\Users\pc\Downloads\ThaoAnh_QLTV\Plugins\QLTV.DataStore.SQL.Dapper\ClassLibrary1\bin\Debug\net6.0\QLTV.UseCase.pdb
+C:\Users\pc\Downloads\ThaoAnh_QLTV\Plugins\QLTV.DataStore.SQL.Dapper\ClassLibrary1\obj\Debug\net6.0\QLTV.DataStore.SQL.Dapper.csproj.AssemblyReference.cache
+C:\Users\pc\Downloads\ThaoAnh_QLTV\Plugins\QLTV.DataStore.SQL.Dapper\ClassLibrary1\obj\Debug\net6.0\QLTV.DataStore.SQL.Dapper.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pc\Downloads\ThaoAnh_QLTV\Plugins\QLTV.DataStore.SQL.Dapper\ClassLibrary1\obj\Debug\net6.0\QLTV.DataStore.SQL.Dapper.AssemblyInfoInputs.cache
+C:\Users\pc\Downloads\ThaoAnh_QLTV\Plugins\QLTV.DataStore.SQL.Dapper\ClassLibrary1\obj\Debug\net6.0\QLTV.DataStore.SQL.Dapper.AssemblyInfo.cs
+C:\Users\pc\Downloads\ThaoAnh_QLTV\Plugins\QLTV.DataStore.SQL.Dapper\ClassLibrary1\obj\Debug\net6.0\QLTV.DataStore.SQL.Dapper.csproj.CoreCompileInputs.cache
+C:\Users\pc\Downloads\ThaoAnh_QLTV\Plugins\QLTV.DataStore.SQL.Dapper\ClassLibrary1\obj\Debug\net6.0\QLTV.Dat.9242E818.Up2Date
+C:\Users\pc\Downloads\ThaoAnh_QLTV\Plugins\QLTV.DataStore.SQL.Dapper\ClassLibrary1\obj\Debug\net6.0\QLTV.DataStore.SQL.Dapper.dll
+C:\Users\pc\Downloads\ThaoAnh_QLTV\Plugins\QLTV.DataStore.SQL.Dapper\ClassLibrary1\obj\Debug\net6.0\refint\QLTV.DataStore.SQL.Dapper.dll
+C:\Users\pc\Downloads\ThaoAnh_QLTV\Plugins\QLTV.DataStore.SQL.Dapper\ClassLibrary1\obj\Debug\net6.0\QLTV.DataStore.SQL.Dapper.pdb
+C:\Users\pc\Downloads\ThaoAnh_QLTV\Plugins\QLTV.DataStore.SQL.Dapper\ClassLibrary1\obj\Debug\net6.0\ref\QLTV.DataStore.SQL.Dapper.dll

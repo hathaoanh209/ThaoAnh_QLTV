@@ -1,0 +1,96 @@
+﻿@page "/BookManagement"
+@using Microsoft.AspNetCore.Authorization
+@using Microsoft.AspNetCore.Components.Authorization
+@using QLTV.CoreBusiness.Services.interfaces
+@inject IUserService UserService
+@inject NavigationManager NavigationManager
+@attribute [Authorize(Roles = "Admin")]
+<PageTitle>Book Management</PageTitle>
+
+<div class="container">
+    <h1 class="my-4">Quản lý sách</h1>
+
+    <AuthorizeView Roles="Admin">
+        <Authorized>
+            @if (danhSachSach == null)
+            {
+                <div class="spinner-border text-primary" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            }
+            else if (danhSachSach.Count == 0)
+            {
+                <p>No books available.</p>
+            }
+            else
+            {
+                <button class="btn btn-success mb-3" @onclick="CreateBook">Thêm sách</button>
+
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered">
+                        <thead class="bg-primary text-white">
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Author</th>
+                                <th>Type of Book</th>
+                                <th>Description</th>
+                                <th>Image</th>
+                                <th>Available</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var book in danhSachSach)
+                            {
+                                <tr>
+                                    <td>@book.BookId</td>
+                                    <td>@book.Name</td>
+                                    <td>@book.Author</td>
+                                    <td>@book.TypeOfBook</td>
+                                    <td>@book.Description</td>
+                                    <td><img src="@book.ImageLink" alt="Book Image" style="width: 100px; height: auto;" /></td>
+                                    <td>@book.Available</td>
+                                    <td>
+                                        <button class="btn btn-primary btn-sm" @onclick="@(() => EditBook(book.BookId))">Cập nhật</button>
+                                        <br />
+                                        <button class="btn btn-danger btn-sm" @onclick="@(() => DeleteBook(book.BookId))">Xóa</button>
+                                    
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            }
+        </Authorized>
+        <NotAuthorized>
+            <p>You are not authorized to view this page.</p>
+        </NotAuthorized>
+    </AuthorizeView>
+</div>
+
+@code {
+    List<BOOK> danhSachSach;
+
+    protected override async Task OnInitializedAsync()
+    {
+        danhSachSach = await UserService.GetBookListAsync(null);
+    }
+
+    void EditBook(int bookId)
+    {
+        NavigationManager.NavigateTo($"/BookC&U/{bookId}");
+    }
+
+    void CreateBook()
+    {
+        NavigationManager.NavigateTo("/BookC&U");
+    }
+
+    async Task DeleteBook(int bookId)
+    {
+        await UserService.DeleteNewBookAsync(bookId);
+        danhSachSach = await UserService.GetBookListAsync(null); // Refresh the book list after deletion
+    }
+}

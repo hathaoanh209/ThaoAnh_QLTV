@@ -1,0 +1,12 @@
+C:\Users\pc\Downloads\ThaoAnh_QLTV\ThaoAnh_QLTV\QLTV.CoreBusiness\bin\Debug\net6.0\QLTV.CoreBusiness.deps.json
+C:\Users\pc\Downloads\ThaoAnh_QLTV\ThaoAnh_QLTV\QLTV.CoreBusiness\bin\Debug\net6.0\QLTV.CoreBusiness.dll
+C:\Users\pc\Downloads\ThaoAnh_QLTV\ThaoAnh_QLTV\QLTV.CoreBusiness\bin\Debug\net6.0\QLTV.CoreBusiness.pdb
+C:\Users\pc\Downloads\ThaoAnh_QLTV\ThaoAnh_QLTV\QLTV.CoreBusiness\obj\Debug\net6.0\QLTV.CoreBusiness.csproj.AssemblyReference.cache
+C:\Users\pc\Downloads\ThaoAnh_QLTV\ThaoAnh_QLTV\QLTV.CoreBusiness\obj\Debug\net6.0\QLTV.CoreBusiness.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pc\Downloads\ThaoAnh_QLTV\ThaoAnh_QLTV\QLTV.CoreBusiness\obj\Debug\net6.0\QLTV.CoreBusiness.AssemblyInfoInputs.cache
+C:\Users\pc\Downloads\ThaoAnh_QLTV\ThaoAnh_QLTV\QLTV.CoreBusiness\obj\Debug\net6.0\QLTV.CoreBusiness.AssemblyInfo.cs
+C:\Users\pc\Downloads\ThaoAnh_QLTV\ThaoAnh_QLTV\QLTV.CoreBusiness\obj\Debug\net6.0\QLTV.CoreBusiness.csproj.CoreCompileInputs.cache
+C:\Users\pc\Downloads\ThaoAnh_QLTV\ThaoAnh_QLTV\QLTV.CoreBusiness\obj\Debug\net6.0\QLTV.CoreBusiness.dll
+C:\Users\pc\Downloads\ThaoAnh_QLTV\ThaoAnh_QLTV\QLTV.CoreBusiness\obj\Debug\net6.0\refint\QLTV.CoreBusiness.dll
+C:\Users\pc\Downloads\ThaoAnh_QLTV\ThaoAnh_QLTV\QLTV.CoreBusiness\obj\Debug\net6.0\QLTV.CoreBusiness.pdb
+C:\Users\pc\Downloads\ThaoAnh_QLTV\ThaoAnh_QLTV\QLTV.CoreBusiness\obj\Debug\net6.0\ref\QLTV.CoreBusiness.dll

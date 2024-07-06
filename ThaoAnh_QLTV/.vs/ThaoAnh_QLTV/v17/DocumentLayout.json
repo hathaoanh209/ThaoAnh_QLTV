@@ -1,0 +1,192 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\ThaoAnh_QLTV\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{32C429F8-3FF9-4EBA-8036-AEC8BF77887A}|..\\QLTV.Web.Modules\\QLTV.Web.AdminPortal\\QLTV.Web.AdminPortal.csproj|c:\\users\\pc\\downloads\\thaoanh_qltv\\qltv.web.modules\\qltv.web.adminportal\\pages\\create\u0026updatebook.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07A00C43-67C9-453E-833B-4CB8C10C3319}|..\\QLTV.Web.Modules\\QLTV.Web.UserPortal\\QLTV.Web.UserPortal.csproj|c:\\users\\pc\\downloads\\thaoanh_qltv\\qltv.web.modules\\qltv.web.userportal\\pages\\dashboard.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41759297-F33E-4804-95D4-9334F0D6F06C}|..\\QLTV.Web.Modules\\QLTV.Web.Common\\QLTV.Web.Common.csproj|c:\\users\\pc\\downloads\\thaoanh_qltv\\qltv.web.modules\\qltv.web.common\\controls\\logincomponent.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32C429F8-3FF9-4EBA-8036-AEC8BF77887A}|..\\QLTV.Web.Modules\\QLTV.Web.AdminPortal\\QLTV.Web.AdminPortal.csproj|c:\\users\\pc\\downloads\\thaoanh_qltv\\qltv.web.modules\\qltv.web.adminportal\\pages\\checkout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F56CBA9-D51F-4275-92A9-124F46A30734}|QLTV.CoreBusiness\\QLTV.CoreBusiness.csproj|c:\\users\\pc\\downloads\\thaoanh_qltv\\thaoanh_qltv\\qltv.corebusiness\\services\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F56CBA9-D51F-4275-92A9-124F46A30734}|QLTV.CoreBusiness\\QLTV.CoreBusiness.csproj|solutionrelative:qltv.corebusiness\\services\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07A00C43-67C9-453E-833B-4CB8C10C3319}|..\\QLTV.Web.Modules\\QLTV.Web.UserPortal\\QLTV.Web.UserPortal.csproj|c:\\users\\pc\\downloads\\thaoanh_qltv\\qltv.web.modules\\qltv.web.userportal\\pages\\viewbookcomponent.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F56CBA9-D51F-4275-92A9-124F46A30734}|QLTV.CoreBusiness\\QLTV.CoreBusiness.csproj|c:\\users\\pc\\downloads\\thaoanh_qltv\\thaoanh_qltv\\qltv.corebusiness\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F56CBA9-D51F-4275-92A9-124F46A30734}|QLTV.CoreBusiness\\QLTV.CoreBusiness.csproj|solutionrelative:qltv.corebusiness\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07A00C43-67C9-453E-833B-4CB8C10C3319}|..\\QLTV.Web.Modules\\QLTV.Web.UserPortal\\QLTV.Web.UserPortal.csproj|c:\\users\\pc\\downloads\\thaoanh_qltv\\qltv.web.modules\\qltv.web.userportal\\controls\\sreachbookcomponent.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8921BAAA-0F07-4550-ABC7-52E1678E7FD1}|ThaoAnh_QLTV\\ThaoAnh_QLTV.csproj|c:\\users\\pc\\downloads\\thaoanh_qltv\\thaoanh_qltv\\thaoanh_qltv\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8921BAAA-0F07-4550-ABC7-52E1678E7FD1}|ThaoAnh_QLTV\\ThaoAnh_QLTV.csproj|solutionrelative:thaoanh_qltv\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\ThaoAnh_QLTV\\ThaoAnh_QLTV\\Program.cs",
+              "RelativeDocumentMoniker": "ThaoAnh_QLTV\\Program.cs",
+              "ToolTip": "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\ThaoAnh_QLTV\\ThaoAnh_QLTV\\Program.cs",
+              "RelativeToolTip": "ThaoAnh_QLTV\\Program.cs",
+              "ViewState": "AQIAAB8AAAAAAAAAAAASwCoAAABPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-05T10:52:34.156Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Create\u0026UpdateBook.razor",
+              "DocumentMoniker": "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\QLTV.Web.Modules\\QLTV.Web.AdminPortal\\Pages\\Create\u0026UpdateBook.razor",
+              "RelativeDocumentMoniker": "..\\QLTV.Web.Modules\\QLTV.Web.AdminPortal\\Pages\\Create\u0026UpdateBook.razor",
+              "ToolTip": "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\QLTV.Web.Modules\\QLTV.Web.AdminPortal\\Pages\\Create\u0026UpdateBook.razor",
+              "RelativeToolTip": "..\\QLTV.Web.Modules\\QLTV.Web.AdminPortal\\Pages\\Create\u0026UpdateBook.razor",
+              "ViewState": "AQIAAE4AAAAAAAAAAAAAAF8AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-06T10:26:45.302Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoginComponent.razor",
+              "DocumentMoniker": "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\QLTV.Web.Modules\\QLTV.Web.Common\\Controls\\LoginComponent.razor",
+              "RelativeDocumentMoniker": "..\\QLTV.Web.Modules\\QLTV.Web.Common\\Controls\\LoginComponent.razor",
+              "ToolTip": "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\QLTV.Web.Modules\\QLTV.Web.Common\\Controls\\LoginComponent.razor",
+              "RelativeToolTip": "..\\QLTV.Web.Modules\\QLTV.Web.Common\\Controls\\LoginComponent.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAACSAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-06T09:36:09.037Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CheckOut.razor",
+              "DocumentMoniker": "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\QLTV.Web.Modules\\QLTV.Web.AdminPortal\\Pages\\CheckOut.razor",
+              "RelativeDocumentMoniker": "..\\QLTV.Web.Modules\\QLTV.Web.AdminPortal\\Pages\\CheckOut.razor",
+              "ToolTip": "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\QLTV.Web.Modules\\QLTV.Web.AdminPortal\\Pages\\CheckOut.razor",
+              "RelativeToolTip": "..\\QLTV.Web.Modules\\QLTV.Web.AdminPortal\\Pages\\CheckOut.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAE0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-06T09:30:22.787Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\ThaoAnh_QLTV\\QLTV.CoreBusiness\\Services\\interfaces\\IUserService.cs",
+              "RelativeDocumentMoniker": "QLTV.CoreBusiness\\Services\\interfaces\\IUserService.cs",
+              "ToolTip": "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\ThaoAnh_QLTV\\QLTV.CoreBusiness\\Services\\interfaces\\IUserService.cs",
+              "RelativeToolTip": "QLTV.CoreBusiness\\Services\\interfaces\\IUserService.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAYwCAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-06T09:16:24.116Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Dashboard.razor",
+              "DocumentMoniker": "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\QLTV.Web.Modules\\QLTV.Web.UserPortal\\Pages\\Dashboard.razor",
+              "RelativeDocumentMoniker": "..\\QLTV.Web.Modules\\QLTV.Web.UserPortal\\Pages\\Dashboard.razor",
+              "ToolTip": "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\QLTV.Web.Modules\\QLTV.Web.UserPortal\\Pages\\Dashboard.razor",
+              "RelativeToolTip": "..\\QLTV.Web.Modules\\QLTV.Web.UserPortal\\Pages\\Dashboard.razor",
+              "ViewState": "AQIAAFkAAAAAAAAAAAAAwGIAAABLAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-06T08:32:09.157Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "SreachBookComponent.razor",
+              "DocumentMoniker": "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\QLTV.Web.Modules\\QLTV.Web.UserPortal\\Controls\\SreachBookComponent.razor",
+              "RelativeDocumentMoniker": "..\\QLTV.Web.Modules\\QLTV.Web.UserPortal\\Controls\\SreachBookComponent.razor",
+              "ToolTip": "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\QLTV.Web.Modules\\QLTV.Web.UserPortal\\Controls\\SreachBookComponent.razor",
+              "RelativeToolTip": "..\\QLTV.Web.Modules\\QLTV.Web.UserPortal\\Controls\\SreachBookComponent.razor",
+              "ViewState": "AQIAADAAAAAAAAAAAAAAAB4AAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-06T08:34:51.838Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ViewBookComponent.razor",
+              "DocumentMoniker": "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\QLTV.Web.Modules\\QLTV.Web.UserPortal\\Pages\\ViewBookComponent.razor",
+              "RelativeDocumentMoniker": "..\\QLTV.Web.Modules\\QLTV.Web.UserPortal\\Pages\\ViewBookComponent.razor",
+              "ToolTip": "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\QLTV.Web.Modules\\QLTV.Web.UserPortal\\Pages\\ViewBookComponent.razor",
+              "RelativeToolTip": "..\\QLTV.Web.Modules\\QLTV.Web.UserPortal\\Pages\\ViewBookComponent.razor",
+              "ViewState": "AQIAACEAAAAAAAAAAAAiwCoAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-06T08:11:25.111Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\ThaoAnh_QLTV\\QLTV.CoreBusiness\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "QLTV.CoreBusiness\\Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\pc\\Downloads\\ThaoAnh_QLTV\\ThaoAnh_QLTV\\QLTV.CoreBusiness\\Services\\UserService.cs",
+              "RelativeToolTip": "QLTV.CoreBusiness\\Services\\UserService.cs",
+              "ViewState": "AQIAALAAAAAAAAAAAAAmwMAAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-06T01:31:00.038Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

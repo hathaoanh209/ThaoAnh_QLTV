@@ -1,0 +1,104 @@
+﻿@page "/Bookloan"
+@using Microsoft.AspNetCore.Authorization
+@using Microsoft.AspNetCore.Components.Authorization
+@using Microsoft.JSInterop
+@using QLTV.CoreBusiness.Services.interfaces
+@inject NavigationManager navigationManager
+@inject IUserService UserService
+@attribute [Authorize(Roles = "Member")]
+@inject IJSRuntime JSRuntime
+@* @rendermode InteractiveServer *@
+
+<Chose_modal></Chose_modal>
+<div class="addbook_form">
+    <div class="Title_page">BOOK LOAN</div>
+    <div class="addbook_form_body">
+        <AuthorizeView Roles="Member">
+            <Authorized>
+                <div>
+                    @* main menu *@
+                    <div class="mainmenu">
+
+                        @* Seach book *@
+                        <div>
+                        </div>
+                        @* read data from database and show them to table *@
+                        <div>
+                            <table class="table table-bordered">
+                                <thead>
+                                    @* header *@
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Author</th>
+                                        <th>TypeOfBook</th>
+                                        <th>Description</th>
+                                        <th>ImageLink</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    @* body *@
+                                    @foreach (var book in booklistAvailable)
+                                    {
+                                        <tr>
+                                            <td>@book.Name</td>
+                                            <td>@book.Author</td>
+                                            <td>@book.TypeOfBook</td>
+                                            <td>@book.Description</td>
+                                            <td>@book.ImageLink</td>
+                                         
+                                            <td>
+                                                <button class="btn btn-primary" @onclick="@(() => HandleSubmit(book.BookId))">Loan Book</button>
+
+                                            </td>
+
+
+                                        </tr>
+                                    }
+
+                                </tbody>
+
+                            </table>
+                        </div>@* read data from database and show them to table *@
+                    </div> @* main menu *@
+                </div>
+            </Authorized>
+        </AuthorizeView>
+    </div>
+</div>
+@code {
+
+
+    [CascadingParameter]
+    private Task<AuthenticationState> authenticationStateTask { get; set; }
+
+
+    public BorrowingRecords currentbook { get; set; } = new();
+
+
+    // get all book list
+    List<BOOK> booklist = new List<BOOK>();
+    List<BOOK> booklistAvailable = new List<BOOK>();
+    protected override async Task OnInitializedAsync()
+    {
+        //getbook list
+        booklist = await UserService.GetBookListAsync(0);
+
+
+        //get Available List
+        booklistAvailable = await UserService.GetBookListAvailableAsync();
+
+    }
+
+
+    async Task HandleSubmit(int id)
+    {
+        var authenticationState = await authenticationStateTask; 
+        //Navigate to ChoseDateLoan
+        navigationManager.NavigateTo($"/choseDateCUD/{id}");
+
+    }
+
+
+
+}

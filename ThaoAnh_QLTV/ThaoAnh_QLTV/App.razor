@@ -1,0 +1,24 @@
+﻿
+<CascadingAuthenticationState>
+    <Router AppAssembly="@typeof(App).Assembly"
+            AdditionalAssemblies="
+new[]{
+                              typeof(QLTV.Web.Common.Controls.CustomerLoginComponent).Assembly,
+                               typeof(QLTV.Web.Common.Controls.RegistrationComponent).Assembly,
+                               typeof(QLTV.Web.UserPortal.Controls.SreachBookComponent).Assembly,
+                               typeof(QLTV.Web.AdminPortal.Pages.BookManagement).Assembly
+                            
+                                }">
+
+        <Found Context="routeData">
+            <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
+            <FocusOnNavigate RouteData="@routeData" Selector="h1" />
+        </Found>
+        <NotFound>
+            <PageTitle>Not found</PageTitle>
+            <LayoutView Layout="@typeof(MainLayout)">
+                <p role="alert">Sorry, there's nothing at this address.</p>
+            </LayoutView>
+        </NotFound>
+    </Router>
+</CascadingAuthenticationState>

@@ -1,0 +1,77 @@
+﻿@page "/checkout/{id}"
+@using Microsoft.AspNetCore.Authorization
+@using Microsoft.JSInterop
+@using QLTV.CoreBusiness.Services.interfaces
+
+@inject IJSRuntime JSRuntime
+@inject NavigationManager navigationManager
+@inject IUserService UserService
+
+@attribute [Authorize(Roles = "Admin,Member")]
+
+<h1 class="text-center">Xác nhận Mượn Sách</h1>
+
+@if (currentbook != null && currentbook.Customer != null && currentbook.BOOK != null)
+{
+    <div class="card mx-auto" style="max-width: 800px;">
+        <div class="row no-gutters">
+            <div class="col-md-4">
+                <img src="@currentbook.BOOK.ImageLink" class="card-img" alt="Book Image">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">@currentbook.BOOK.Name</h5>
+                    <p class="card-text">Mã sách: @currentbook.BOOK.BookId</p>
+                    <p class="card-text">Người dùng: @currentbook.Customer.CustomerId</p>
+                    <p class="card-text">Ngày mượn: @currentbook.BorrowedDate.ToString("MM/dd/yyyy")</p>
+                    <p class="card-text">Ngày trả: @currentbook.ReturnedDate.ToString("MM/dd/yyyy")</p>
+                    <p class="card-text">Trạng thái: @(currentbook.IsCheckOut ? "Đã mượn" : "Chưa mượn")</p>
+                    <button class="btn btn-primary" @onclick="HandleCheckout">Xác nhận Mượn Sách</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+else
+{
+    <p class="text-center">Có lỗi xảy ra khi tải thông tin mượn sách.</p>
+}
+
+@code {
+    [Parameter]
+    public string id { get; set; } // Để trường id là kiểu string
+
+    public BorrowingRecords currentbook { get; set; }
+
+    [CascadingParameter]
+    private Task<AuthenticationState> authenticationStateTask { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Chuyển đổi id từ string sang int
+        if (int.TryParse(id, out int bookId))
+        {
+            var authenticationState = await authenticationStateTask;
+            currentbook = await UserService.GetBorrowingRecordByIdAsync(bookId);
+        }
+        else
+        {
+            // Xử lý khi không chuyển đổi được id sang int
+            // Ví dụ: thông báo lỗi, chuyển hướng người dùng, vv.
+            // Ở đây có thể bạn cần xử lý theo cách phù hợp với logic của ứng dụng của bạn
+        }
+    }
+
+    async Task HandleCheckout()
+    {
+        if (currentbook != null)
+        {
+            // Thực hiện xử lý mượn sách ở đây
+            // Ví dụ: gọi UserService để cập nhật thông tin mượn sách
+            await UserService.CheckoutBookAsync(currentbook.Id);
+
+            // Sau khi xử lý xong, chuyển hướng người dùng về trang "dashboard"
+            navigationManager.NavigateTo("/dashboard");
+        }
+    }
+}

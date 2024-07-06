@@ -1,0 +1,19 @@
+﻿@if(this.Book != null)
+{
+<tr>
+	<td>
+			<NavLink href="@($"books/{Book.BookId}")">
+				@Book.Name
+		</NavLink>
+			
+		</td>
+		<td>@Book.Author</td>
+		<td>@Book.TypeOfBook</td>
+</tr>
+}
+
+
+@code {
+	[Parameter]
+	public BOOK Book{ get; set; }
+}

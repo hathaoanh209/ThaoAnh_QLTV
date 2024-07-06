@@ -1,0 +1,145 @@
+﻿@page "/choseDateCUD/{Id:int}"
+@using Microsoft.AspNetCore.Authorization
+@using Microsoft.AspNetCore.Components.Authorization
+@using QLTV.CoreBusiness.Models
+@using QLTV.CoreBusiness.Services.interfaces
+@inject NavigationManager NavigationManager
+@inject IUserService UserService
+@attribute [Authorize(Roles = "Member")]
+
+<h3 class="text-center">CHI TIẾT MƯỢN SÁCH</h3>
+<AuthorizeView Roles="Member" Context="authContext">
+    <Authorized>
+        <div class="container">
+            @if (currentBook != null)
+            {
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="@GetImageSource(currentBook.ImageLink)" alt="Book Image" style="max-width: 100%; height: auto;" />
+                    </div>
+                    <div class="col-md-8">
+                        <h2>@currentBook.Name</h2>
+                        <div><strong>Tác giả:</strong> @currentBook.Author</div>
+                        <div><strong>Mô tả:</strong> @currentBook.Description</div>
+                        <br />
+                    </div>
+                </div>
+                <br />
+                <div class="addbook_form">
+                    <div class="addbook_form_body">
+                        <EditForm Model="@currentbook" OnValidSubmit="HandleSubmit">
+                            <div class="form-outline mb-4">
+                                <h3 class="text-center">Chọn ngày bạn muốn trả sách</h3>
+                                <InputDate @bind-Value="currentbook.ReturnedDate" class="form-control" />
+                            </div>
+                            @if (!string.IsNullOrEmpty(dueDateErrorMessage))
+                            {
+                                <div class="alert alert-danger">@dueDateErrorMessage</div>
+                            }
+                            @if (!string.IsNullOrEmpty(borrowedErrorMessage))
+                            {
+                                <div class="alert alert-danger">@borrowedErrorMessage</div>
+                            }
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary">Xác nhận</button>
+                                <button type="button" class="btn btn-secondary" @onclick="GoBack">Hủy</button>
+                            </div>
+                        </EditForm>
+                    </div>
+                </div>
+            }
+            else
+            {
+                <div class="alert alert-warning">Không tìm thấy thông tin sách.</div>
+            }
+        </div>
+        <br />
+    </Authorized>
+</AuthorizeView>
+
+@code {
+    private BOOK currentBook;
+    private string dueDateErrorMessage;
+    private string borrowedErrorMessage;
+    public BorrowingRecords currentbook { get; set; } = new BorrowingRecords { ReturnedDate = DateTime.Today };
+
+    [Parameter]
+    public int Id { get; set; }
+
+    [CascadingParameter]
+    private Task<AuthenticationState> authenticationStateTask { get; set; }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        if (Id > 0)
+        {
+            currentBook = await UserService.GetBookByIdAsync(Id);
+            if (currentBook != null)
+            {
+                currentbook.BookId = currentBook.BookId;
+            }
+            else
+            {
+                Console.WriteLine($"Không tìm thấy sách với ID: {Id}");
+            }
+        }
+    }
+
+    private string GetImageSource(string image)
+    {
+        if (string.IsNullOrEmpty(image))
+        {
+            return "path/to/default/image.jpg";
+        }
+
+        bool isBase64 = (image.Length % 4 == 0) &&
+                        System.Text.RegularExpressions.Regex.IsMatch(image, @"^[a-zA-Z0-9\+/]*={0,2}$");
+
+        if (isBase64)
+        {
+            return $"data:image/jpeg;base64,{image}";
+        }
+        else
+        {
+            return image;
+        }
+    }
+
+    async Task HandleSubmit()
+    {
+        var authenticationState = await authenticationStateTask;
+        var CustomerName = authenticationState.User.Identity.Name;
+
+        dueDateErrorMessage = string.Empty;
+        borrowedErrorMessage = string.Empty;
+
+        if (currentbook.ReturnedDate <= DateTime.Today)
+        {
+            dueDateErrorMessage = "Ngày trả sách phải là ngày trong tương lai.";
+        }
+
+        if (await UserHasBorrowedBook(CustomerName, Id))
+        {
+            borrowedErrorMessage = "Bạn đã mượn sách này rồi.";
+        }
+
+        if (!string.IsNullOrEmpty(dueDateErrorMessage) || !string.IsNullOrEmpty(borrowedErrorMessage))
+        {
+            return;
+        }
+
+        await UserService.AddBookLoanAsync(currentbook, CustomerName, Id);
+        NavigationManager.NavigateTo("/dashboard");
+    }
+
+    async Task<bool> UserHasBorrowedBook(string CustomerName, int bookId)
+    {
+        var borrowingRecords = await UserService.GetLoanBookListAsync(CustomerName);
+        return borrowingRecords.Any(br => br.BookId == bookId);
+    }
+
+    void GoBack()
+    {
+        NavigationManager.NavigateTo("/books");
+    }
+}
